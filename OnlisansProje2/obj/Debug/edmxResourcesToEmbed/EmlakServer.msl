@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmlakServerModelStoreContainer" CdmEntityContainer="EmlakServerEntitiess">
+    <EntitySetMapping Name="fotoes">
+      <EntityTypeMapping TypeName="EmlakServerModel.foto">
+        <MappingFragment StoreEntitySet="foto">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="fotograf" ColumnName="fotograf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ils">
+      <EntityTypeMapping TypeName="EmlakServerModel.il">
+        <MappingFragment StoreEntitySet="il">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ilAdi" ColumnName="ilAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ilans">
+      <EntityTypeMapping TypeName="EmlakServerModel.ilan">
+        <MappingFragment StoreEntitySet="ilan">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+          <ScalarProperty Name="metrekare" ColumnName="metrekare" />
+          <ScalarProperty Name="oluşturmaTarihi" ColumnName="oluşturmaTarihi" />
+          <ScalarProperty Name="semtID" ColumnName="semtID" />
+          <ScalarProperty Name="kategoriID" ColumnName="kategoriID" />
+          <ScalarProperty Name="kullaniciID" ColumnName="kullaniciID" />
+          <ScalarProperty Name="fotoID" ColumnName="fotoID" />
+          <ScalarProperty Name="turID" ColumnName="turID" />
+          <ScalarProperty Name="detay_ID" ColumnName="detay_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ilanDetays">
+      <EntityTypeMapping TypeName="EmlakServerModel.ilanDetay">
+        <MappingFragment StoreEntitySet="ilanDetay">
+          <ScalarProperty Name="ilanID" ColumnName="ilanID" />
+          <ScalarProperty Name="odaSayisi" ColumnName="odaSayisi" />
+          <ScalarProperty Name="binaYasi" ColumnName="binaYasi" />
+          <ScalarProperty Name="katSayisi" ColumnName="katSayisi" />
+          <ScalarProperty Name="bulunduguKat" ColumnName="bulunduguKat" />
+          <ScalarProperty Name="isitma" ColumnName="isitma" />
+          <ScalarProperty Name="esyalimi" ColumnName="esyalimi" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ilces">
+      <EntityTypeMapping TypeName="EmlakServerModel.ilce">
+        <MappingFragment StoreEntitySet="ilce">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ilceAdi" ColumnName="ilceAdi" />
+          <ScalarProperty Name="ilID" ColumnName="ilID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kategoris">
+      <EntityTypeMapping TypeName="EmlakServerModel.kategori">
+        <MappingFragment StoreEntitySet="kategori">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="kategoriAdi" ColumnName="kategoriAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanicis">
+      <EntityTypeMapping TypeName="EmlakServerModel.kullanici">
+        <MappingFragment StoreEntitySet="kullanici">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="semts">
+      <EntityTypeMapping TypeName="EmlakServerModel.semt">
+        <MappingFragment StoreEntitySet="semt">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="semtAdi" ColumnName="semtAdi" />
+          <ScalarProperty Name="ilceID" ColumnName="ilceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="EmlakServerModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="turs">
+      <EntityTypeMapping TypeName="EmlakServerModel.tur">
+        <MappingFragment StoreEntitySet="tur">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="turAdi" ColumnName="turAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

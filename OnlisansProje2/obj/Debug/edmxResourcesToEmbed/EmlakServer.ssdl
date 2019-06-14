@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmlakServerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="foto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fotograf" Type="image" />
+  </EntityType>
+  <EntityType Name="il">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ilAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ilan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="nvarchar" MaxLength="50" />
+    <Property Name="fiyat" Type="int" />
+    <Property Name="metrekare" Type="int" />
+    <Property Name="oluşturmaTarihi" Type="datetime" />
+    <Property Name="semtID" Type="int" />
+    <Property Name="kategoriID" Type="int" />
+    <Property Name="kullaniciID" Type="int" />
+    <Property Name="fotoID" Type="int" />
+    <Property Name="turID" Type="int" />
+    <Property Name="detay_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="ilanDetay">
+    <Key>
+      <PropertyRef Name="ilanID" />
+    </Key>
+    <Property Name="ilanID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="odaSayisi" Type="nvarchar" MaxLength="50" />
+    <Property Name="binaYasi" Type="int" />
+    <Property Name="katSayisi" Type="int" />
+    <Property Name="bulunduguKat" Type="int" />
+    <Property Name="isitma" Type="nvarchar" MaxLength="50" />
+    <Property Name="esyalimi" Type="nvarchar" MaxLength="50" />
+    <Property Name="aciklama" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ilce">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ilceAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="ilID" Type="int" />
+  </EntityType>
+  <EntityType Name="kategori">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kategoriAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="kullanici">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullaniciAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+    <Property Name="ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="soyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="50" />
+    <Property Name="rol" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="semt">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="semtAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="ilceID" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tur">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="turAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_ilan_foto1">
+    <End Role="foto" Type="Self.foto" Multiplicity="0..1" />
+    <End Role="ilan" Type="Self.ilan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="foto">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ilan">
+        <PropertyRef Name="fotoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ilan_ilanDetay1">
+    <End Role="ilanDetay" Type="Self.ilanDetay" Multiplicity="0..1" />
+    <End Role="ilan" Type="Self.ilan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ilanDetay">
+        <PropertyRef Name="ilanID" />
+      </Principal>
+      <Dependent Role="ilan">
+        <PropertyRef Name="detay_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ilan_kategori">
+    <End Role="kategori" Type="Self.kategori" Multiplicity="0..1" />
+    <End Role="ilan" Type="Self.ilan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategori">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ilan">
+        <PropertyRef Name="kategoriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ilan_kullanici">
+    <End Role="kullanici" Type="Self.kullanici" Multiplicity="0..1" />
+    <End Role="ilan" Type="Self.ilan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kullanici">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ilan">
+        <PropertyRef Name="kullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ilan_semt">
+    <End Role="semt" Type="Self.semt" Multiplicity="0..1" />
+    <End Role="ilan" Type="Self.ilan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="semt">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ilan">
+        <PropertyRef Name="semtID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ilan_tur">
+    <End Role="tur" Type="Self.tur" Multiplicity="0..1" />
+    <End Role="ilan" Type="Self.ilan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tur">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ilan">
+        <PropertyRef Name="fotoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ilce_il">
+    <End Role="il" Type="Self.il" Multiplicity="0..1" />
+    <End Role="ilce" Type="Self.ilce" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="il">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ilce">
+        <PropertyRef Name="ilID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_semt_ilce">
+    <End Role="ilce" Type="Self.ilce" Multiplicity="0..1" />
+    <End Role="semt" Type="Self.semt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ilce">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="semt">
+        <PropertyRef Name="ilceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmlakServerModelStoreContainer">
+    <EntitySet Name="foto" EntityType="Self.foto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="il" EntityType="Self.il" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ilan" EntityType="Self.ilan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ilanDetay" EntityType="Self.ilanDetay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ilce" EntityType="Self.ilce" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kategori" EntityType="Self.kategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kullanici" EntityType="Self.kullanici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="semt" EntityType="Self.semt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tur" EntityType="Self.tur" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ilan_foto1" Association="Self.FK_ilan_foto1">
+      <End Role="foto" EntitySet="foto" />
+      <End Role="ilan" EntitySet="ilan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ilan_ilanDetay1" Association="Self.FK_ilan_ilanDetay1">
+      <End Role="ilanDetay" EntitySet="ilanDetay" />
+      <End Role="ilan" EntitySet="ilan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ilan_kategori" Association="Self.FK_ilan_kategori">
+      <End Role="kategori" EntitySet="kategori" />
+      <End Role="ilan" EntitySet="ilan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ilan_kullanici" Association="Self.FK_ilan_kullanici">
+      <End Role="kullanici" EntitySet="kullanici" />
+      <End Role="ilan" EntitySet="ilan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ilan_semt" Association="Self.FK_ilan_semt">
+      <End Role="semt" EntitySet="semt" />
+      <End Role="ilan" EntitySet="ilan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ilan_tur" Association="Self.FK_ilan_tur">
+      <End Role="tur" EntitySet="tur" />
+      <End Role="ilan" EntitySet="ilan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ilce_il" Association="Self.FK_ilce_il">
+      <End Role="il" EntitySet="il" />
+      <End Role="ilce" EntitySet="ilce" />
+    </AssociationSet>
+    <AssociationSet Name="FK_semt_ilce" Association="Self.FK_semt_ilce">
+      <End Role="ilce" EntitySet="ilce" />
+      <End Role="semt" EntitySet="semt" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

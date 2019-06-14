@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f141f98a13414950829bb129a99dda8c" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="EmlakServerModel.foto" Width="1.5" PointX="11.625" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmlakServerModel.il" Width="1.5" PointX="5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmlakServerModel.ilan" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmlakServerModel.ilanDetay" Width="1.5" PointX="9.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmlakServerModel.ilce" Width="1.5" PointX="5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmlakServerModel.kategori" Width="1.5" PointX="11.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmlakServerModel.kullanici" Width="1.5" PointX="9.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmlakServerModel.semt" Width="1.5" PointX="5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmlakServerModel.sysdiagram" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmlakServerModel.tur" Width="1.5" PointX="7.125" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="EmlakServerModel.FK_ilan_foto1" ManuallyRouted="true" >
+          <ConnectorPoint PointX="11.625" PointY="3.4716112518624227" />
+          <ConnectorPoint PointX="9" PointY="3.492490024744269" />
+        </AssociationConnector>
+        <AssociationConnector Association="EmlakServerModel.FK_ilce_il" ManuallyRouted="false" />
+        <AssociationConnector Association="EmlakServerModel.FK_ilan_ilanDetay1" ManuallyRouted="false" />
+        <AssociationConnector Association="EmlakServerModel.FK_ilan_kategori" ManuallyRouted="true" >
+          <ConnectorPoint PointX="12.669395179906532" PointY="4.875" />
+          <ConnectorPoint PointX="12.669395179906532" PointY="4.5136522455245691" />
+          <ConnectorPoint PointX="11.292316954907907" PointY="4.5136522455245691" />
+          <ConnectorPoint PointX="11.292316954907907" PointY="3.8257577548680133" />
+          <ConnectorPoint PointX="9" PointY="3.8257577548680133" />
+        </AssociationConnector>
+        <AssociationConnector Association="EmlakServerModel.FK_ilan_kullanici" ManuallyRouted="false" />
+        <AssociationConnector Association="EmlakServerModel.FK_ilan_semt" ManuallyRouted="false" />
+        <AssociationConnector Association="EmlakServerModel.FK_ilan_tur" ManuallyRouted="false" />
+        <AssociationConnector Association="EmlakServerModel.FK_semt_ilce" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
