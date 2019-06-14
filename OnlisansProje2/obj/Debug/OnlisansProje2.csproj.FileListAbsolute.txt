@@ -34,3 +34,23 @@ E:\Entity Framework\Emlak Projesi\OnlisansProje2\obj\Debug\OnlisansProje2.Hesap_
 E:\Entity Framework\Emlak Projesi\OnlisansProje2\obj\Debug\OnlisansProje2.KullaniciForm.resources
 E:\Entity Framework\Emlak Projesi\OnlisansProje2\obj\Debug\OnlisansProje2.Properties.Resources.resources
 E:\Entity Framework\Emlak Projesi\OnlisansProje2\obj\Debug\OnlisansProje2.csproj.GenerateResource.Cache
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\bin\Debug\OnlisansProje2.exe.config
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\bin\Debug\OnlisansProje2.exe
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\bin\Debug\OnlisansProje2.pdb
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\bin\Debug\EntityFramework.dll
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\bin\Debug\EntityFramework.SqlServer.dll
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\bin\Debug\EntityFramework.xml
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\bin\Debug\EntityFramework.SqlServer.xml
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.csprojAssemblyReference.cache
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.Admin_Duzenle.resources
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.Admin_Ekle.resources
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.Admin_Paneli.resources
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.Form1.resources
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.Hesap_Ayarları.resources
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.KullaniciForm.resources
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.Properties.Resources.resources
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.csproj.GenerateResource.cache
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.csproj.CoreCompileInputs.cache
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.csproj.CopyComplete
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.exe
+D:\Emlak Uygulaması\Emlak Projesi (Uygulama)\OnlisansProje2\obj\Debug\OnlisansProje2.pdb
